@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { 
-  Terminal, Code2, Rocket, Sparkles, Mail, Phone, 
+  Sparkles, Mail, Phone, 
   GraduationCap, MapPin, Globe, Award, Briefcase, Cpu, CheckCircle2 
 } from "lucide-react";
 
@@ -45,10 +46,13 @@ export default function Home() {
             className="lg:col-span-4 flex flex-col items-center bg-white/[0.03] border border-white/10 p-8 rounded-3xl backdrop-blur-xl shadow-2xl relative group"
           >
             <div className="relative w-44 h-44 mb-6 rounded-full p-1 bg-gradient-to-tr from-purple-500 via-yellow-400 to-purple-600 shadow-lg shadow-purple-500/20">
-              <img 
+              <Image 
                 src="/foto-perfil.png" 
                 alt="Esmeralda Veliz" 
+                width={176}
+                height={176}
                 className="w-full h-full object-cover rounded-full bg-black"
+                priority
               />
             </div>
 
@@ -122,7 +126,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 border border-yellow-500/30 rounded-full w-fit">
               <Sparkles className="w-4 h-4 text-yellow-400" />
               <span className="text-yellow-300 text-xs md:text-sm font-medium italic">
-                "Todo lo que puedes imaginar lo puedes lograr"
+                &quot;Todo lo que puedes imaginar lo puedes lograr&quot;
               </span>
             </div>
           </motion.div>
